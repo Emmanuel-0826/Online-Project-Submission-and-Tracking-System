@@ -1,0 +1,332 @@
+/* ============================================================
+   css/admin.css — Admin Portal Specific Styles
+   OPSTS – Online Project Supervision & Tracking System
+============================================================ */
+
+/* ══════════════════════════════════════
+   DASHBOARD
+══════════════════════════════════════ */
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: 12px var(--space-md);
+  border-bottom: 1px solid var(--gray-200);
+  transition: background var(--transition);
+}
+
+.activity-item:last-child { border-bottom: none; }
+.activity-item:hover       { background: var(--gray-50); }
+
+.activity-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.activity-info { flex: 1; }
+
+.activity-info .act-msg {
+  font-size: var(--font-size-sm);
+  color: var(--gray-800);
+  line-height: 1.5;
+}
+
+.activity-info .act-time {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+  margin-top: 2px;
+}
+
+/* ══════════════════════════════════════
+   USERS PAGE
+══════════════════════════════════════ */
+
+.users-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.users-search {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex: 1;
+  max-width: 340px;
+}
+
+.users-search input {
+  padding: 8px 13px;
+  font-size: var(--font-size-sm);
+}
+
+.role-filter-tabs {
+  display: flex;
+  gap: 0;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.role-filter-tab {
+  padding: 7px 16px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--gray-600);
+  background: var(--white);
+  cursor: pointer;
+  border-right: 1.5px solid var(--gray-200);
+  transition: background var(--transition), color var(--transition);
+  user-select: none;
+}
+
+.role-filter-tab:last-child { border-right: none; }
+.role-filter-tab:hover      { background: var(--gray-50); color: var(--primary); }
+.role-filter-tab.active     { background: var(--primary); color: var(--white); }
+
+/* User row actions */
+.user-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* ══════════════════════════════════════
+   PROJECTS PAGE
+══════════════════════════════════════ */
+
+.projects-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.project-row-meta {
+  font-size: var(--font-size-xs);
+  color: var(--gray-600);
+  margin-top: 3px;
+}
+
+.project-row-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+/* ══════════════════════════════════════
+   ASSIGN PAGE
+══════════════════════════════════════ */
+
+.assign-card {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+  transition: box-shadow var(--transition);
+}
+
+.assign-card:last-child { margin-bottom: 0; }
+.assign-card:hover      { box-shadow: var(--shadow-md); }
+
+.assign-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 14px var(--space-md);
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.assign-card-header .ac-info  { flex: 1; }
+.assign-card-header .ac-name  {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 2px;
+}
+.assign-card-header .ac-meta  {
+  font-size: var(--font-size-xs);
+  color: var(--gray-600);
+}
+
+.assign-card-body {
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.assign-card-body label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--gray-700);
+  white-space: nowrap;
+}
+
+.assign-card-body select {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 13px;
+  font-size: var(--font-size-sm);
+}
+
+/* Supervisor workload strip */
+.supervisor-workload {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.workload-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 12px var(--space-md);
+  border-bottom: 1px solid var(--gray-200);
+  font-size: var(--font-size-sm);
+}
+
+.workload-item:last-child { border-bottom: none; }
+
+.workload-item .wi-name  { flex: 1; font-weight: 600; color: var(--gray-900); }
+.workload-item .wi-count {
+  font-size: var(--font-size-xs);
+  color: var(--gray-600);
+  min-width: 80px;
+  text-align: right;
+}
+
+/* ══════════════════════════════════════
+   REPORTS PAGE
+══════════════════════════════════════ */
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.report-card {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  transition: box-shadow var(--transition), border-color var(--transition);
+  cursor: pointer;
+}
+
+.report-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.report-card .rc-icon {
+  font-size: 2.4rem;
+  margin-bottom: var(--space-sm);
+}
+
+.report-card .rc-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+}
+
+.report-card .rc-desc {
+  font-size: var(--font-size-xs);
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.report-section {
+  margin-bottom: var(--space-xl);
+}
+
+.report-section h3 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  color: var(--gray-900);
+}
+
+/* Summary stat strips in reports */
+.report-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px var(--space-md);
+  border-bottom: 1px solid var(--gray-200);
+  font-size: var(--font-size-sm);
+}
+
+.report-stat-row:last-child { border-bottom: none; }
+.report-stat-row .rs-label  { color: var(--gray-700); }
+.report-stat-row .rs-value  { font-weight: 700; color: var(--gray-900); }
+
+/* ══════════════════════════════════════
+   PROFILE PAGE
+══════════════════════════════════════ */
+
+.profile-avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+  gap: 8px;
+}
+
+.profile-name {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.profile-id {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.readonly-field {
+  background: var(--gray-100) !important;
+  color: var(--gray-600)      !important;
+  cursor: not-allowed;
+}
+
+/* ══════════════════════════════════════
+   NOTIFICATIONS
+══════════════════════════════════════ */
+
+.notif-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--space-md);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .reports-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .reports-grid   { grid-template-columns: 1fr; }
+  .users-toolbar  { flex-direction: column; align-items: flex-start; }
+  .users-search   { max-width: 100%; width: 100%; }
+  .assign-card-body { flex-direction: column; align-items: flex-start; }
+}
