@@ -30,46 +30,48 @@
     </div>
 
     <nav class="sidebar-nav">
-      <div class="nav-section">Main</div>
-      <div class="nav-item active" data-page="dashboard.html">
-        <span class="nav-icon">🏠</span>
-        <span class="nav-label">Dashboard</span>
-      </div>
-      <div class="nav-item" data-page="submissions.html">
-        <span class="nav-icon">📤</span>
-        <span class="nav-label">My Submissions</span>
-      </div>
-      <div class="nav-item" data-page="feedback.html">
-        <span class="nav-icon">💬</span>
-        <span class="nav-label">Feedback</span>
-        <span class="nav-badge hidden" id="fbBadge"></span>
-      </div>
-      <div class="nav-item" data-page="progress.html">
-        <span class="nav-icon">📊</span>
-        <span class="nav-label">Progress</span>
-      </div>
+  <div class="nav-section">Main</div>
+  <div class="nav-item" data-page="dashboard.html">
+    <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+    <span class="nav-label">Dashboard</span>
+  </div>
+  <div class="nav-item" data-page="submissions.html">
+    <span class="nav-icon"><i class="fa-solid fa-upload"></i></span>
+    <span class="nav-label">My Submissions</span>
+  </div>
+  <div class="nav-item" data-page="feedback.html">
+    <span class="nav-icon"><i class="fa-solid fa-comments"></i></span>
+    <span class="nav-label">Feedback</span>
+    <span class="nav-badge hidden" id="fbBadge"></span>
+  </div>
+  <div class="nav-item" data-page="progress.html">
+    <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+    <span class="nav-label">Progress</span>
+  </div>
 
-      <div class="nav-section">Communication</div>
-      <div class="nav-item" data-page="meetings.html">
-        <span class="nav-icon">📅</span>
-        <span class="nav-label">Meetings</span>
-      </div>
-      <div class="nav-item" data-page="notifications.html">
-        <span class="nav-icon">🔔</span>
-        <span class="nav-label">Notifications</span>
-        <span class="nav-badge hidden" id="ntfBadge"></span>
-      </div>
+  <div class="nav-section">Communication</div>
+  <div class="nav-item" data-page="meetings.html">
+    <span class="nav-icon"><i class="fa-solid fa-calendar-days"></i></span>
+    <span class="nav-label">Meetings</span>
+  </div>
+  <div class="nav-item" data-page="notifications.html">
+    <span class="nav-icon"><i class="fa-solid fa-bell"></i></span>
+    <span class="nav-label">Notifications</span>
+    <span class="nav-badge hidden" id="ntfBadge"></span>
+  </div>
 
-      <div class="nav-section">Account</div>
-      <div class="nav-item" data-page="profile.html">
-        <span class="nav-icon">👤</span>
-        <span class="nav-label">My Profile</span>
-      </div>
-    </nav>
+  <div class="nav-section">Account</div>
+  <div class="nav-item" data-page="profile.html">
+    <span class="nav-icon"><i class="fa-solid fa-circle-user"></i></span>
+    <span class="nav-label">My Profile</span>
+  </div>
+</nav>
 
-    <div class="sidebar-footer">
-      <button class="btn-logout" id="logoutBtn">🚪 Sign Out</button>
-    </div>
+<div class="sidebar-footer">
+  <button class="btn-logout" id="logoutBtn">
+    <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+  </button>
+</div>
   </aside>
 
   <!-- ═══════════════ MAIN ═══════════════ -->
@@ -84,12 +86,14 @@
         </div>
       </div>
       <div class="topbar-actions">
-        <button class="icon-btn" id="notifBtn" title="Notifications">
-          🔔
-          <span class="dot hidden" id="ntfDot"></span>
-        </button>
-        <button class="icon-btn" id="profileBtn" title="Profile">👤</button>
-      </div>
+  <button class="icon-btn" id="notifBtn" title="Notifications">
+    <i class="fa-solid fa-bell"></i>
+    <span class="dot hidden" id="ntfDot"></span>
+  </button>
+  <button class="icon-btn" id="profileBtn" title="Profile">
+    <i class="fa-solid fa-circle-user"></i>
+  </button>
+</div>
     </div>
 
     <!-- Page Content -->

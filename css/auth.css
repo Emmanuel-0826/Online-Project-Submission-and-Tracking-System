@@ -50,13 +50,13 @@
 }
 
 .banner-logo {
-  width: 120px;
-  height: 120px;
+  width: 220px;
+  height: 220px;
   object-fit: contain;
   margin-bottom: var(--space-lg);
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.35));
 }
 
 .banner-title {
